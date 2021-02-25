@@ -158,35 +158,48 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-我的 vscode 配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/21/hello-world/">Hello World</a>
+      <a class="article-title" href="/2021/02/25/%E6%88%91%E7%9A%84%20vscode%20%E9%85%8D%E7%BD%AE/">我的第一篇记录</a>
     </h1>
   
 
         
-        <a href="/2021/01/21/hello-world/" class="archive-article-date">
-  	<time datetime="2021-01-21T11:10:57.548Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
+        <a href="/2021/02/25/%E6%88%91%E7%9A%84%20vscode%20%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2021-02-25T10:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="VScode-c-c-配置文件"><a href="#VScode-c-c-配置文件" class="headerlink" title="VScode c/c++配置文件"></a>VScode c/c++配置文件</h1><h2 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h2><p>作为计算机新人，软件全靠自己摸索，由于刚接触vscode,在网上查找了各种视频和论坛，下载了各种c/c++的ide，还是回来学习vscode的配置以及用法，前前后后折腾了差不多一个星期吧，不仅折腾了vscode,还有clion、code:blocks、eclipseforc/c+以及最开始的devc++,这些ide不是太原始、界面太难看就是用着不舒服，还clion，弄了两天，可能还是没怎么弄明白</p>
+<h2 id="基本安装"><a href="#基本安装" class="headerlink" title="基本安装"></a>基本安装</h2><ul>
+<li>首先安装mingw,下载地址<a target="_blank" rel="noopener" href="https://bit.ly/mingw10">点击这</a>  </li>
+<li>如果进不去那就去 百度云盘下吧，链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1bL7gH7QYSQR4u5J5RqEk9A">https://pan.baidu.com/s/1bL7gH7QYSQR4u5J5RqEk9A</a> 提取码: gpwk 复制这段内容后打开百度网盘手机App，操作更方便哦.解压后好像直接就安装了  </li>
+<li>然后就是安装系统环境变量<br>搜索编辑系统环境变量，然后进去点击高级选项，点击右下角环境变量，然后点击user用户变量，下面有个path，选中，点击编辑，新建，把你的mingw安装路径下的bin文件的路径复制过来，一路ok下去。  </li>
+<li>安装vscode<br>直接去官网下载，安装</li>
+<li>vscode 的插件<br>推荐c/c++,code runner,chinese(markdown all in one,Markdown Preview Enhanced 这是markdown文件，用来写东西的，可以不安)</li>
+<li>vscode的配置文件<br>先建立一个hello.c文件，然后点击左边的运行，会生成tasks.json文件，然后点击终端，选中配置任务，生成launch.json文件<h2 id="最重要的配置文件模板"><a href="#最重要的配置文件模板" class="headerlink" title="最重要的配置文件模板"></a>最重要的配置文件模板</h2><h3 id="c语言模板"><a href="#c语言模板" class="headerlink" title="c语言模板"></a>c语言模板</h3><blockquote>
+<p>launch.json</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;  </span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;configurations&quot;</span>: [  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>, <span class="comment">// 配置名称，将会在启动配置的下拉菜单中显示  </span></span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,       <span class="comment">// 配置类型，这里只能为cppdbg  </span></span><br><span class="line">            <span class="string">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,    <span class="comment">// 请求配置类型，可以为launch（启动）或attach（附加）  </span></span><br><span class="line">            <span class="string">&quot;program&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">// 将要进行调试的程序的路径  </span></span><br><span class="line">            <span class="string">&quot;args&quot;</span>: [],             <span class="comment">// 程序调试时传递给程序的命令行参数，一般设为空即可  </span></span><br><span class="line">            <span class="string">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,   <span class="comment">// 设为true时程序将暂停在程序入口处，一般设置为false  </span></span><br><span class="line">            <span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>, <span class="comment">// 调试程序时的工作目录，一般为$&#123;workspaceFolder&#125;即代码所在目录  </span></span><br><span class="line">            <span class="string">&quot;environment&quot;</span>: [],  </span><br><span class="line">            <span class="string">&quot;externalConsole&quot;</span>: <span class="literal">true</span>, <span class="comment">// 调试时是否显示控制台窗口，一般设置为true显示控制台  </span></span><br><span class="line">            <span class="string">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,  </span><br><span class="line">            <span class="string">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;C:\\MinGW\\bin\\gdb.exe&quot;</span>, <span class="comment">// miDebugger的路径，注意这里要与MinGw的路径对应  </span></span><br><span class="line">            <span class="string">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;gcc&quot;</span>, <span class="comment">// 调试会话开始前执行的任务，一般为编译程序，c++为g++, c为gcc  </span></span><br><span class="line">            <span class="string">&quot;setupCommands&quot;</span>: [  </span><br><span class="line">                &#123;   </span><br><span class="line">		    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,  </span><br><span class="line">                    <span class="string">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,  </span><br><span class="line">                    <span class="string">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span>  </span><br><span class="line">                &#125;  </span><br><span class="line">            ]  </span><br><span class="line">        &#125;  </span><br><span class="line">    ]  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+注意mingw的路径要自己改成自己安装mingw的路径</li>
+</ul>
+<blockquote>
+<p>tasks.json</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// See https://go.microsoft.com/fwlink/?LinkId=733558 </span></span><br><span class="line">    <span class="comment">// for the documentation about the tasks.json format</span></span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tasks&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;shell&quot;</span>,</span><br><span class="line">            <span class="string">&quot;label&quot;</span>: <span class="string">&quot;gcc&quot;</span>, <span class="comment">//这里注意一下，见下文</span></span><br><span class="line">            <span class="string">&quot;command&quot;</span>: <span class="string">&quot;C:\\MinGW\\bin\\gcc.exe&quot;</span>,</span><br><span class="line">            <span class="string">&quot;args&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;-g&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">                <span class="string">&quot;-o&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&quot;options&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;C:\\MinGW\\bin&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h3><p>将上面的gcc改成g++就行</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>第一次自己认真的打博客，既作为笔记给自己看，也希望帮助其他的同学，谢谢，我会继续改进的</p>
+<hr>
+<hr>
+<hr>
 
       
 
@@ -194,28 +207,12 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
       
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/21/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/25/%E6%88%91%E7%9A%84%20vscode%20%E9%85%8D%E7%BD%AE/">展开全文 >></a>
         </p>
       
 
@@ -358,6 +355,93 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/01/21/%E2%80%9C%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E2%80%9D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/21/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/21/hello-world/" class="archive-article-date">
+  	<time datetime="2021-01-21T11:10:57.548Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/21/hello-world/">展开全文 >></a>
         </p>
       
 
