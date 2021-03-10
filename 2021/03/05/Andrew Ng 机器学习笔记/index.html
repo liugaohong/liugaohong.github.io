@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>wode | 洛阳纸贵不贵、</title>
+  <title>机器学习笔记 | 洛阳纸贵不贵、</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有了兴趣才能更好的学习吖">
+  <meta name="description" content="监督学习(supervised learning)notation:m &#x3D; number of training examples(m表示训练样本的数目)x’s &#x3D; “input”variable&#x2F;features(x表示输入变量或特征值)y’s &#x3D; “output”variable&#x2F;“target”variable(y表示输出变量或目标变量) 回归问题(refression problem)线性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wode">
-<meta property="og:url" content="http://example.com/2021/01/22/wode/index.html">
+<meta property="og:title" content="机器学习笔记">
+<meta property="og:url" content="http://example.com/2021/03/05/Andrew%20Ng%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="洛阳纸贵不贵、">
-<meta property="og:description" content="有了兴趣才能更好的学习吖">
+<meta property="og:description" content="监督学习(supervised learning)notation:m &#x3D; number of training examples(m表示训练样本的数目)x’s &#x3D; “input”variable&#x2F;features(x表示输入变量或特征值)y’s &#x3D; “output”variable&#x2F;“target”variable(y表示输出变量或目标变量) 回归问题(refression problem)线性">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-22T05:43:37.000Z">
-<meta property="article:modified_time" content="2021-01-22T05:43:37.399Z">
+<meta property="article:published_time" content="2021-03-05T09:13:21.000Z">
+<meta property="article:modified_time" content="2021-03-10T10:25:28.260Z">
 <meta property="article:author" content="洛阳纸贵不贵、">
 <meta name="twitter:card" content="summary">
   
@@ -159,27 +159,73 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-wode" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Andrew Ng 机器学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      wode
+      机器学习笔记
     </h1>
   
 
         
-        <a href="/2021/01/22/wode/" class="archive-article-date">
-  	<time datetime="2021-01-22T05:43:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-22</time>
+        <a href="/2021/03/05/Andrew%20Ng%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-05T09:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="监督学习-supervised-learning"><a href="#监督学习-supervised-learning" class="headerlink" title="监督学习(supervised learning)"></a>监督学习(supervised learning)</h1><p>notation:<br>m = number of training examples(m表示训练样本的数目)<br>x’s = “input”variable/features(x表示输入变量或特征值)<br>y’s = “output”variable/“target”variable(y表示输出变量或目标变量)</p>
+<h2 id="回归问题-refression-problem"><a href="#回归问题-refression-problem" class="headerlink" title="回归问题(refression problem)"></a>回归问题(refression problem)</h2><h3 id="线性回归模型-linear-regression-univariate-linear-regression"><a href="#线性回归模型-linear-regression-univariate-linear-regression" class="headerlink" title="线性回归模型(linear regression/univariate linear regression)"></a>线性回归模型(linear regression/univariate linear regression)</h3><p>假设函数 hypothesis：$h_{\theta}$(x) = $\theta_{0}$+$\theta_{1}$$\cdot$x<br>平方误差代价函数 cost function: J($\theta_{0}$,$\theta_{1}$) = $\frac{1}{2m}$ $\sum_{i=1}^{m}$ $(h_{\theta}(x^{(i)})-y^{(i)})^{2}$</p>
+<h3 id="一：梯度下降算法-gradient-descent"><a href="#一：梯度下降算法-gradient-descent" class="headerlink" title="一：梯度下降算法(gradient descent)"></a>一：梯度下降算法(gradient descent)</h3><p>重复直到收敛(repeat until convergence) {<br>    $\theta_{j}$ := $\theta_{j}$- $\alpha$$\frac{\partial}{\partial\theta_{j}}$J($\theta_{0},\theta_{1}$)<br>}<br>其中 := 表示赋值<br>    $\alpha$ 表示下降速率(learning rate)</p>
+<p>correct:simultaneous update<br>temp0 := $\theta_{0} - \alpha\frac{\partial}{\partial\theta_{0}}J(\theta_{0},\theta_{1})$<br>temp1 := $\theta_{1} - \alpha\frac{\partial}{\partial\theta_{1}}J(\theta_{0},\theta_{1})$<br>$\theta_{0} := temp0$<br>$\theta_{1} := temp1$</p>
+<h4 id="梯度下降与线性回归相结合"><a href="#梯度下降与线性回归相结合" class="headerlink" title="梯度下降与线性回归相结合"></a>梯度下降与线性回归相结合</h4><p>$\frac{\partial}{\partial\theta_{j}} J(\theta_{0},\theta_{1}) = \frac{\partial}{\partial\theta_{j}} \frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{i})-y^{i})^{2}<br>    =\frac{\partial}{\partial\theta_{j}}\frac{1}{2m} \sum_{i=1}^{m}(\theta_{0}+\theta_{1}x^{i}-y^{i})^{2}$</p>
+<p>j=0: $\frac{\partial}{\partial\theta_{0}} J(\theta_{0},\theta_{1})=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{i})-y^{i})$</p>
+<p>j=1: $\frac{\partial}{\partial\theta_{1}} J(\theta_{0},\theta_{1})=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{i})-y^{i})*x^{i}$</p>
+<h4 id="multiple-features-variables"><a href="#multiple-features-variables" class="headerlink" title="multiple features(variables)"></a>multiple features(variables)</h4><p>$x_{n}^{(m)}$<br>Notation:<br>    n = number of features<br>    m = number of variables<br>    $x^{i}$ = input(features) of $i^{th}$ training example.<br>    $x_{j}^{(i)}$ = value of feature j in $i^{th}$ training example</p>
+<h4 id="多元线性回归假设-multivariate-linear-regression-hypothesis"><a href="#多元线性回归假设-multivariate-linear-regression-hypothesis" class="headerlink" title="多元线性回归假设 (multivariate linear regression hypothesis)"></a>多元线性回归假设 (multivariate linear regression hypothesis)</h4><p>$h_{\theta}(x)=\theta_{0}+\theta_{1}x_{1}+\theta_{2}x_{2}+…+\theta_{n}x_{n}$<br>define $x_{0}=0$<br>&emsp;$x=\begin{bmatrix}<br>    x_{0}\<br>    x_{1}\<br>    .\<br>    .\<br>    x_{n}\<br>\end{bmatrix}$</p>
+<p>&emsp;$\theta=\begin{bmatrix}<br>    \theta_{0}\<br>    \theta_{1}\<br>    .\<br>    .\<br>    \theta_{n}\<br>\end{bmatrix}$</p>
+<p>&emsp;$h_{\theta}(x)=\theta_{0}+\theta_{1}x_{1}+\theta_{2}x_{2}+…+\theta_{n}x_{n}=\theta^{T}x$</p>
+<p>代价函数(cost function):<br>&emsp;$J(\theta_{0},\theta_{1},…,\theta_{n})=<br>\frac{1}{2m} \sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^{2}$</p>
+<p>梯度下降(gradient descent):<br>&emsp;repeat {<br>    &emsp;&emsp;$\theta_{j} :=\theta_{j}-\alpha\frac{\partial}{\partial\theta_{j}}J(\theta_{0},…,\theta_{n})$ (j=0,…,n)<br>}</p>
+<h5 id="多元线性回归算法-new-algorithm-n-gt-1"><a href="#多元线性回归算法-new-algorithm-n-gt-1" class="headerlink" title="多元线性回归算法(new algorithm (n &gt;= 1)):"></a>多元线性回归算法(new algorithm (n &gt;= 1)):</h5><p>repeat {<br>      &emsp;&emsp;$\theta_{j} :=\theta_{j}-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{j}^{(i)}$<br>}</p>
+<p>$\theta_{0} :=\theta_{0}-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{0}^{(i)}$</p>
+<p>$\theta_{1} :=\theta_{1}-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{1}^{(i)}$</p>
+<p>$\theta_{1} :=\theta_{1}-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{1}^{(i)}$</p>
+<h5 id="特征值缩放-feature-scaling"><a href="#特征值缩放-feature-scaling" class="headerlink" title="特征值缩放(feature scaling)"></a>特征值缩放(feature scaling)</h5><p>idea:make sure features are on a similar scale<br>特征值/最大值<br>&emsp;get every features into approximately a $-1 \leqslant x_{i} \leqslant 1$ range</p>
+<h5 id="均值归一化-mean-normalization"><a href="#均值归一化-mean-normalization" class="headerlink" title="均值归一化(mean normalization)"></a>均值归一化(mean normalization)</h5><p>$x_{i}=\frac{x_{i}-\mu_{i}}{s_{i}}=\frac{特征值-平均值}{特征值的范围(最大值-最小值)}$</p>
+<h5 id="learning-rate-summary"><a href="#learning-rate-summary" class="headerlink" title="learning rate summary"></a>learning rate summary</h5><ul>
+<li>if $\alpha$ is too small: slow convergence.</li>
+<li>if $\alpha$ is too large: $J(\theta)$ may not decrease on every iteration; may not converge.</li>
+</ul>
+<h3 id="二：正规方程-normal-equation"><a href="#二：正规方程-normal-equation" class="headerlink" title="二：正规方程(normal equation)"></a>二：正规方程(normal equation)</h3><p>一次性求解 $\theta$ 的最优值</p>
+<p>$\theta=(X^{T}X)^{-1}X^{T}y$<br>Octave: $pinv(X^{‘}*X)*X^{‘}*y$</p>
+<h3 id="梯度下降算法与正规方程的比较-the-compare-of-Gradient-Descent-and-Normal-Equation"><a href="#梯度下降算法与正规方程的比较-the-compare-of-Gradient-Descent-and-Normal-Equation" class="headerlink" title="梯度下降算法与正规方程的比较(the compare of Gradient Descent and Normal Equation)"></a>梯度下降算法与正规方程的比较(the compare of Gradient Descent and Normal Equation)</h3><p>Gradient Descent:</p>
+<ul>
+<li>need to choose $\alpha$.</li>
+<li>needs many iterations.</li>
+<li>works well even when n is large.</li>
+</ul>
+<p>Normal Equation:</p>
+<ul>
+<li>no need to choose $\alpha$.</li>
+<li>don’t need to iterate.</li>
+<li>need to compute $(X^{T}X)^{-1}$</li>
+<li>slow if n is very large.</li>
+</ul>
+<h3 id="三：逻辑回归模型"><a href="#三：逻辑回归模型" class="headerlink" title="三：逻辑回归模型"></a>三：逻辑回归模型</h3><p>要使得预测值的范围为 0-1 ，使用逻辑回归模型<br>$h_{\theta}(x) = g(\theta^{T}x)$</p>
+<h4 id="sigmoid-function-logistic-function"><a href="#sigmoid-function-logistic-function" class="headerlink" title="sigmoid function(logistic function):"></a>sigmoid function(logistic function):</h4><p>&emsp;$g(z) = \frac{1}{1+e^{-z}}$</p>
+<p>$h_{\theta}(x) = \frac{1}{1+e^{-\theta^{T}x}}$</p>
+<h4 id="logistic-regression-cost-function"><a href="#logistic-regression-cost-function" class="headerlink" title="logistic regression cost function:"></a>logistic regression cost function:</h4><p>$J(\theta)=\frac{1}{m} \sum_{i=1}^{m}cost(h_{\theta}(x^{(i)}),y^{(i)})$</p>
+<p>$cost(h_{\theta}(x),y)=-ylog(h_{\theta}(x)-(1-y)log(1-h_{\theta}(x))$</p>
+<p>note:  y=0 or 1 always</p>
+<h5 id="gradient-descent"><a href="#gradient-descent" class="headerlink" title="gradient descent:"></a>gradient descent:</h5><p>$J(\theta)=-\frac{1}{m}[\sum_{i=1}^{m} y^{(i)}log(h_{\theta}(x^{(i)})+(1-y^{(i)})log(1-h_{\theta}(x^{(i)}))]$</p>
+<p>want $mini_{\theta}J(\theta):$<br>&emsp;repeat {<br>    &emsp;&emsp;$\theta_{j} :=\theta_{j}-\alpha\frac{\partial}{\partial\theta_{j}}J(\theta)<br>    =\theta_{j}-\alpha \sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{j}^{(i)}$<br>}</p>
+<h4 id="高级优化算法（advanced-optimization-）"><a href="#高级优化算法（advanced-optimization-）" class="headerlink" title="高级优化算法（advanced optimization ）"></a>高级优化算法（advanced optimization ）</h4><h4 id="多类别分类（multiclass-classification）"><a href="#多类别分类（multiclass-classification）" class="headerlink" title="多类别分类（multiclass classification）"></a>多类别分类（multiclass classification）</h4><h3 id="四：过度拟合（overfitting）"><a href="#四：过度拟合（overfitting）" class="headerlink" title="四：过度拟合（overfitting）"></a>四：过度拟合（overfitting）</h3>
       
 
       
@@ -268,7 +314,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://liugaohong.github.io/021/01/22/wode/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://liugaohong.github.io/021/03/05/Andrew%20Ng%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,18 +328,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/02/25/%E6%88%91%E7%9A%84%20vscode%20%E9%85%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/03/08/Octave%20tutorial/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          我的第一篇记录
+          Octave tutorial
         
       </div>
     </a>
   
   
-    <a href="/2021/01/21/%E2%80%9C%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E2%80%9D/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">“我的第一篇文章”</div>
+    <a href="/2021/02/25/%E6%88%91%E7%9A%84%20vscode%20%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇记录</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -320,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0-supervised-learning"><span class="toc-number">1.</span> <span class="toc-text">监督学习(supervised learning)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98-refression-problem"><span class="toc-number">1.1.</span> <span class="toc-text">回归问题(refression problem)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B-linear-regression-univariate-linear-regression"><span class="toc-number">1.1.1.</span> <span class="toc-text">线性回归模型(linear regression&#x2F;univariate linear regression)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%EF%BC%9A%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95-gradient-descent"><span class="toc-number">1.1.2.</span> <span class="toc-text">一：梯度下降算法(gradient descent)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9B%B8%E7%BB%93%E5%90%88"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">梯度下降与线性回归相结合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#multiple-features-variables"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">multiple features(variables)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%81%87%E8%AE%BE-multivariate-linear-regression-hypothesis"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">多元线性回归假设 (multivariate linear regression hypothesis)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95-new-algorithm-n-gt-1"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">多元线性回归算法(new algorithm (n &gt;&#x3D; 1)):</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC%E7%BC%A9%E6%94%BE-feature-scaling"><span class="toc-number">1.1.2.3.2.</span> <span class="toc-text">特征值缩放(feature scaling)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9D%87%E5%80%BC%E5%BD%92%E4%B8%80%E5%8C%96-mean-normalization"><span class="toc-number">1.1.2.3.3.</span> <span class="toc-text">均值归一化(mean normalization)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#learning-rate-summary"><span class="toc-number">1.1.2.3.4.</span> <span class="toc-text">learning rate summary</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%EF%BC%9A%E6%AD%A3%E8%A7%84%E6%96%B9%E7%A8%8B-normal-equation"><span class="toc-number">1.1.3.</span> <span class="toc-text">二：正规方程(normal equation)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95%E4%B8%8E%E6%AD%A3%E8%A7%84%E6%96%B9%E7%A8%8B%E7%9A%84%E6%AF%94%E8%BE%83-the-compare-of-Gradient-Descent-and-Normal-Equation"><span class="toc-number">1.1.4.</span> <span class="toc-text">梯度下降算法与正规方程的比较(the compare of Gradient Descent and Normal Equation)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%EF%BC%9A%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.5.</span> <span class="toc-text">三：逻辑回归模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sigmoid-function-logistic-function"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">sigmoid function(logistic function):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#logistic-regression-cost-function"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">logistic regression cost function:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#gradient-descent"><span class="toc-number">1.1.5.2.1.</span> <span class="toc-text">gradient descent:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%EF%BC%88advanced-optimization-%EF%BC%89"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">高级优化算法（advanced optimization ）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%B1%BB%E5%88%AB%E5%88%86%E7%B1%BB%EF%BC%88multiclass-classification%EF%BC%89"><span class="toc-number">1.1.5.4.</span> <span class="toc-text">多类别分类（multiclass classification）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%EF%BC%9A%E8%BF%87%E5%BA%A6%E6%8B%9F%E5%90%88%EF%BC%88overfitting%EF%BC%89"><span class="toc-number">1.1.6.</span> <span class="toc-text">四：过度拟合（overfitting）</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
